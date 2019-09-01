@@ -1,0 +1,25 @@
+package homework1;
+import java.util.Scanner;
+public class ArraysWithDoubles {
+	public static void main(String[] args) {
+		double[] bruh = initializeArray();
+		String bruh1 = bruh.toString();
+		System.out.println("" + bruh1);
+	}
+	public static double[] initializeArray() {
+		Scanner input = new Scanner(System.in);
+		double[] array = new double[10];
+		for (int i = 0; i < array.length; i++) {
+			do {
+				System.out.println("Enter a double:");
+				if(!input.hasNextDouble()) {
+					System.out.println("You did not enter a double!");
+				}
+				array[i] = input.nextDouble();
+			}
+			while(array[i] < 0);
+		}
+		return array;
+	}
+}
+

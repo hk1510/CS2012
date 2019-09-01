@@ -1,0 +1,51 @@
+package homework1;
+import java.util.Scanner;
+public class ArraysWithDoubles {
+	public static void main(String[] args) {
+		double[] array = initializeArray();
+		for (int i = 0; i < array.length; i++) {
+			System.out.print(array[i] + " ");
+		}
+	}
+	public static double[] initializeArray() {
+		Scanner input = new Scanner(System.in);
+		double[] array = new double[10];
+		System.out.println("Enter 10 nonnegative doubles:");
+		for (int i = 0; i < array.length; i++) {
+			do {
+				if(i == 0) {
+					System.out.print("Enter the 1st double: ");
+				}
+				else if (i == 1) {
+					System.out.print("Enter the 2nd double: ");
+				}
+				else if (i == 2) {
+					System.out.print("Enter the 3rd double: ");
+				}
+				else {
+					System.out.print("Enter the " + (i+1) + "th double: ");
+				}
+				if(!input.hasNextDouble()) {
+					String str = input.next();
+					System.out.print(str + " is not a double! ");
+				}
+				else {
+					double temp = input.nextDouble();
+					if (temp == 0) {
+						break;
+					}
+					else if(temp < 0) {
+						System.out.println("You entered a negative double!");
+					}
+					else {
+						array[i] = temp;
+					}
+					
+				}
+			}
+			while(array[i] <= 0);
+		}
+		return array;
+	}
+}
+
