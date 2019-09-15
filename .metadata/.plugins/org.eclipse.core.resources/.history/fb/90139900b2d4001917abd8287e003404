@@ -1,0 +1,23 @@
+package homework2;
+
+import java.util.Date;
+
+public class MonsterAttack {
+	private String monsterName;
+	private String attackLocation;
+	private double damagesInMillionUSD;
+	private Date date;
+	
+	public String getMonsterName() {
+		return monsterName;
+	}
+	public String getAttackLocation() {
+		return attackLocation;
+	}
+	public double getDamagesInMillionUSD() {
+		return damagesInMillionUSD;
+	}
+	public Date getDate() {
+		return date;
+	}
+}

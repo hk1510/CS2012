@@ -1,0 +1,42 @@
+package homework2;
+
+import java.util.Date;
+
+public class MonsterAttack {
+	private static String monsterName = "Godzilla";
+	private static String attackLocation = "New York";
+	private static double damagesInMillionUSD = 5.3;
+	private static Date date = new Date(19, 9, 11);
+	
+	public static void main(String[] args) {
+		toString();
+	}
+	
+	public String getMonsterName() {
+		return monsterName;
+	}
+	public String getAttackLocation() {
+		return attackLocation;
+	}
+	public double getDamagesInMillionUSD() {
+		return damagesInMillionUSD;
+	}
+	public Date getDate() {
+		return date;
+	}
+	public void setMonsterName(String monsterName) {
+		this.monsterName = monsterName;
+	}
+	public void setAttackLocation(String attackLocation) {
+		this.attackLocation = attackLocation;
+	}
+	public void setDamagesInMillionUSD(double damagesInMillionUSD) {
+		this.damagesInMillionUSD = damagesInMillionUSD;
+	}
+	public void setDate(Date date) {
+		this.date = date;
+	}
+	public static String toString() {
+		return monsterName + " caused " + damagesInMillionUSD + " million dollars of damage at " + attackLocation + " on " + date.toString();
+	}
+}

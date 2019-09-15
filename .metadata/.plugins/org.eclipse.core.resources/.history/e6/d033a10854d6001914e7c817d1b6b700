@@ -1,0 +1,8 @@
+package homework2;
+
+public class MonitorDriver {
+	public static void main(String[] args) {
+		MonsterAttack godzilla = new MonsterAttack();
+		System.out.println(godzilla.toString());
+	}
+}

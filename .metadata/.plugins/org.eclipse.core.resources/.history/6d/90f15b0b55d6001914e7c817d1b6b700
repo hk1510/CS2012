@@ -1,0 +1,9 @@
+package homework2;
+
+public class MonitorDriver {
+	public static void main(String[] args) {
+		AttackMonitor monitor = new AttackMonitor();
+		MonsterAttack[] array = monitor.reportAttacks();
+		System.out.println(array[1].toString());
+	}
+}
