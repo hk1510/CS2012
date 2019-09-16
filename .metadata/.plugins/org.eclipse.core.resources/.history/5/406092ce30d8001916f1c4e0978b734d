@@ -1,0 +1,14 @@
+package homework2;
+
+public class MonitorDriver {
+	public static void main(String[] args) {
+		AttackMonitor monitor = new AttackMonitor();
+		monitor.reportAttacks();
+		monitor.showAttacks();
+		monitor.showDamages();
+		monitor.showMonsters();
+		monitor.findEarliestAttack();
+		
+		
+	}
+}

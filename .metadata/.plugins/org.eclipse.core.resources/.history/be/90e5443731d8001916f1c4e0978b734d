@@ -14,8 +14,6 @@ public class MonitorDriver {
 			System.out.println("Enter 4 for information on the earliest attack.");
 			System.out.println("Enter 5 to quit.");
 			
-			choice = input.nextInt();
-			
 			switch(choice) {
 			case 1:
 				monitor.showAttacks();

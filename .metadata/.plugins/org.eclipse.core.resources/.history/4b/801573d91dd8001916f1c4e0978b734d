@@ -27,7 +27,6 @@ public class AttackMonitor {
 	public void showAttacks() {
 		System.out.println();
 		for (int i = 0; i < attacks.length; i++) {
-			System.out.println("\nAttack " + (i+1) + ": ");
 			System.out.println(attacks[i].toString());
 		}
 	}
@@ -56,20 +55,11 @@ public class AttackMonitor {
 				}
 			}
 			if (count > 0) {
-				System.out.println(attacks[i].monsterName + ": " + count + " attack(s)");
+				System.out.println(attacks[i].monsterName + ": " + count + " attacks");
 			}
 		}
 	}
 	public void findEarliestAttack() {
-		MonsterAttack earliestAttack = attacks[0];
-		Date earliestAttackDate = attacks[0].getDate();
-		for (int i = 0; i < attacks.length; i++) {
-			Date attackDate = attacks[i].getDate();
-			if (attackDate.compareTo(earliestAttackDate) < 0) {
-				earliestAttack = attacks[i];
-			}
-		}
-		System.out.println("\nThe details of the earliest attack are:");
-		System.out.println(earliestAttack.toString());
+		
 	}
 }

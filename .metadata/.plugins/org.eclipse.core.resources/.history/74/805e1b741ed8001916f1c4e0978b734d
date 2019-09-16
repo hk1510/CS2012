@@ -33,6 +33,6 @@ public class MonsterAttack {
 		this.date = date;
 	}
 	public String toString() {
-		return "Monster: " + monsterName + " \nDamages: $" + damagesInMillionUSD + " million \nAttack Location: " + attackLocation + " \nDate:  " + date.getMonth() + "/" + date.getDay() + "/" + date.getYear();
+		return "Monster: " + monsterName + " \nDamages: $" + damagesInMillionUSD + "million \nAttack Location: " + attackLocation + " \nDate:  " + date.getMonth() + "/" + date.getDay() + "/" + date.getYear();
 	}
 }
