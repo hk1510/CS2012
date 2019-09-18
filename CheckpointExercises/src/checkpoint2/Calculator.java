@@ -7,9 +7,23 @@ public class Calculator {
 			System.exit(1);
 		}
 		int result = 0;
-		args = args[0].split(" ");
-		for(int i = 0; i < args.length; i++) {
-			System.out.print(args[i] + " ");
+		String arg = args[0].replaceAll(" ", "");
+		System.out.print(arg);
+
+		switch (arg.charAt(1)) {
+			case '+':
+					result = Integer.parseInt(String.valueOf(arg.charAt(0))) + Integer.parseInt(String.valueOf(arg.charAt(2)));
+					break;
+			case '-':
+					result = Integer.parseInt(String.valueOf(arg.charAt(0))) - Integer.parseInt(String.valueOf(arg.charAt(2)));
+					break;
+			case '*':
+					result = Integer.parseInt(String.valueOf(arg.charAt(0))) * Integer.parseInt(String.valueOf(arg.charAt(2)));
+					break;
+			case '/':
+					result = Integer.parseInt(String.valueOf(arg.charAt(0))) / Integer.parseInt(String.valueOf(arg.charAt(2)));
+					break;
 		}
+		System.out.print(" = " + result);
 	}
 }
