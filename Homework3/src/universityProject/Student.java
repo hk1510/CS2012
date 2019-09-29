@@ -6,12 +6,11 @@ import java.util.Scanner;
 public class Student extends Person{
 	private int cin;
 	private ArrayList<Course> courses = new ArrayList<>();
-	
-	Scanner input = new Scanner(System.in);
+	private Scanner input = new Scanner(System.in);
 	
 	Student() {
 		super();
-		System.out.println("Enter the student's CIN: ");
+		System.out.println("Enter the student's CIN (integer): ");
 		cin = input.nextInt();
 		
 	}
@@ -31,7 +30,7 @@ public class Student extends Person{
 		return courses;
 	}
 
-	public void add(Course course) {
+	public boolean add(Course course) {
 		boolean courseAlreadyAdded = false;
 		if (courses.size() > 0) {
 			for(int i = 0; i < courses.size(); i++) {
@@ -47,34 +46,17 @@ public class Student extends Person{
 		else {
 			courses.add(course);
 		}
-		
-		System.out.println("Course added!");
+		return !courseAlreadyAdded;
 	}
-	public void drop(Course course) {
-		boolean removed = false;
-		if (courses.size() > 0) {
-			for(int i = 0; i < courses.size(); i++) {
-				if (course.getCourseID().equals(courses.get(i).getCourseID())) {
-					courses.remove(courses.get(i));
-					System.out.println("Course removed!");
-					removed = true;
-				}
-			}
-			if(!removed) {
-				System.out.println("Student was never enrolled in that class.");
-			}
-		}
-		else {
-			courses.remove(course);
-		}
-		
+	public void drop(int index) {
+		courses.remove(index);
 	}
 	
 	public String displayEnrolled() {
 		String courseList = "";
 		if(courses.size() > 0) {
 			for(int i = 0; i < courses.size(); i++) {
-				courseList += "\n" + courseList;
+				courseList += "\n\tCourse " + (i+1) + ":\n" + courses.get(i).toString() + "\n"; 
 			}
 		}
 		else {

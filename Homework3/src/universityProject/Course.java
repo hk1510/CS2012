@@ -6,8 +6,7 @@ public class Course {
 	
 	private String courseID;
 	private int units;
-	
-	Scanner input = new Scanner(System.in);
+	private Scanner input = new Scanner(System.in);
 	
 	Course() {
 		System.out.println("Enter the course identifier: ");
@@ -37,6 +36,6 @@ public class Course {
 		this.units = units;
 	}
 	public String toString() {
-		return "Course ID: " + courseID + "\nUnits: " + units; 
+		return "\tCourse ID: " + courseID + "\n\tUnits: " + units; 
 	}
 }

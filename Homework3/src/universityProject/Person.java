@@ -6,12 +6,11 @@ public class Person {
 	
 	private String name;
 	private Address address;
+	private Scanner input = new Scanner(System.in);
 	
 	
-	
-	Person() {
-		Scanner input = new Scanner(System.in);	
-		System.out.println("Enter the name: ");
+	Person() {	
+		System.out.println("Enter their name: ");
 		name = input.nextLine();
 		address = new Address();
 	}

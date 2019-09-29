@@ -8,20 +8,19 @@ public class Address {
 	private String city;
 	private String state;
 	private String country;
-	
-	Scanner input = new Scanner(System.in);
+	private Scanner input = new Scanner(System.in);
 	
 	public Address() {
-		System.out.println("Enter the street number: ");
+		System.out.println("Enter their street number: ");
 		streetNum = input.nextInt();
 		input.nextLine();
-		System.out.println("Enter the street name: ");
+		System.out.println("Enter their street name: ");
 		streetName = input.nextLine();
-		System.out.println("Enter the city name: ");
+		System.out.println("Enter their city name: ");
 		city = input.nextLine();
-		System.out.println("Enter the name of the State: ");
+		System.out.println("Enter the name of their State: ");
 		state = input.nextLine();
-		System.out.println("Enter the name of the country: ");
+		System.out.println("Enter the name of their country: ");
 		country = input.nextLine();
 		
 	}
