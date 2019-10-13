@@ -1,12 +1,12 @@
-package homework2;
+package homework4;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class MonsterAttack {
 	public String monsterName;
 	public String attackLocation;
 	public double damagesInMillionUSD;
-	public Date date;
+	public LocalDate date;
 	
 	public String getMonsterName() {
 		return monsterName;
@@ -17,7 +17,7 @@ public class MonsterAttack {
 	public double getDamagesInMillionUSD() {
 		return damagesInMillionUSD;
 	}
-	public Date getDate() {
+	public LocalDate getDate() {
 		return date;
 	}
 	public void setMonsterName(String monsterName) {
@@ -29,10 +29,10 @@ public class MonsterAttack {
 	public void setDamagesInMillionUSD(double damagesInMillionUSD) {
 		this.damagesInMillionUSD = damagesInMillionUSD;
 	}
-	public void setDate(Date date) {
+	public void setDate(LocalDate date) {
 		this.date = date;
 	}
 	public String toString() {
-		return "Monster: " + monsterName + " \nDamages: $" + damagesInMillionUSD + " million \nAttack Location: " + attackLocation + " \nDate:  " + date.getMonth() + "/" + date.getDay() + "/" + date.getYear();
+		return "Monster: " + monsterName + " \nDamages: $" + damagesInMillionUSD + " million \nAttack Location: " + attackLocation + " \nDate:  " + date.getMonthValue() + "/" + date.getDayOfMonth() + "/" + date.getYear();
 	}
 }
