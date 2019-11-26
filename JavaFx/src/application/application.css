@@ -1,0 +1,6 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+* {
+	-fx-background-color: #ffff00;
+	-fx-background-image: url("https://specials-images.forbesimg.com/imageserve/1180631446/960x0.jpg?fit=scale");
+	-fx-background-repeat: stretch;
+}
